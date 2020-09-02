@@ -266,6 +266,7 @@ sns.heatmap(confusion_matrix_df, annot=True)
 
 print(classification_report(y_test, y_pred_list))
 
+torch.save(model.state_dict(), 'model.pt')
 
 plt.show()
 plt.savefig('confusion_matrix')
